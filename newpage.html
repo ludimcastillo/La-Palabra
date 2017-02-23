@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<title>La Palabra</title>
+</head>
+
+<body>
+	<div id="container">
+		<div class="mainContent" id="cardContainer"></div>
+	</div>
+	<a id='setting'><span class='icon-cogs'></span></a>
+	<dialog id='setting-container'>
+	    <h3>Languages</h3>
+	    <ul class='options'>
+	        <li>
+		        <label>Spanish<input name='languages' value='spanish' type="radio" id="lang_sp"/>
+		        	<span class='icon-check'></span>
+		        </label>
+	        </li>
+	    </ul>
+	    <h3>Pronunciation</h3>
+	    <ul class='options'>
+	    	<li>
+	    		<label>Hide Pronunciation<input type="checkbox" id="hideorthography"/>
+	    			<span class='icon-check'></span>
+	    		</label>
+	    	</li>
+	    </ul>
+	    <p id='website'>
+	    	<a href="https://www.linkedin.com/in/ludim-castillo-4a79703a" target='_blank'>Ludim Castillo</a>
+	    </p>
+	    <a id='close-setting'><span class='icon-cross'></span></a>
+  	</dialog>
+
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

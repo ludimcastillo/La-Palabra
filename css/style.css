@@ -1,0 +1,293 @@
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+/*
+* Site for icon fonts: https://icomoon.io/app/#/select;
+* How-To: http://tutorialtraining.brittanyamanda.com/fontawesome.php
+*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ejcrsh');
+  src:  url('../fonts/icomoon.eot?ejcrsh#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ejcrsh') format('truetype'),
+    url('../fonts/icomoon.woff?ejcrsh') format('woff'),
+    url('../fonts/icomoon.svg?ejcrsh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cogs:before {
+  content: "\e995";
+}
+.icon-cross:before {
+  content: "\ea0f";
+
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-checkmark2:before {
+  content: "\ea11";
+}
+
+*:focus {
+    outline: none
+}
+
+body {
+    background: #222;
+    color: #777a7d;
+    font-family: Cantarell, Arial, "Hiragino Kaku Gothic ProN", "Sazanami Gothic", Meiryo, "MS PGothic", sans-serif;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: box;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: middle;
+    box-align: center
+}
+
+#container {
+    border-radius: 3px;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: box;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: middle;
+    box-align: center
+}
+
+#cardContainer {
+    height: 580px;
+    width: 450px
+}
+
+#cardContainer section {
+    position: relative
+}
+
+#website {
+    bottom: 0;
+    cursor: pointer;
+    font-size: .75em;
+    padding: 1.25em;
+    position: absolute;
+    right: 0;
+    text-align: right
+}
+#website a {
+    color: #000;
+    outline: 0;
+    text-decoration: none
+}
+#website a:hover {
+    text-decoration: underline
+}
+
+#setting,
+#info {
+    bottom: 1em;
+    cursor: pointer;
+    display: block;
+    font-size: 1.2em;
+    position: absolute;
+    text-shadow: 0 1px 0 rgba(225, 255, 255, 0.1);
+}
+#setting span,
+#info span {
+    color: #777;
+    transition: color .2s ease-in-out;
+}
+#setting span:hover,
+#info span:hover {
+    color: #fff;
+}
+#setting {
+    left: 1em;
+}
+#info {
+    right: 1em;
+}
+
+#setting-container {
+    background: #fff;
+    border: none;
+    box-shadow: 0 1px 5px #000;
+    color: #000;
+    font-size: 16px;
+    height: 100vh;
+    width: 250px;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    z-index: 3
+}
+#setting-container #close-setting {
+    bottom: 0;
+    display: block;
+    font-size: 1.2em;
+    padding: 1em 0;
+    position: absolute
+}
+#setting-container #close-setting span {
+    position: relative;
+    padding: 1em
+}
+#setting-container #close-setting span:hover {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+#setting-container h3 {
+    background: #000;
+    color: #fff;
+    font-size: 0.88em;
+    font-weight: 400;
+    padding: 1.4em .8em
+}
+#setting-container ul {
+    margin: 0;
+    padding: 0
+}
+#setting-container ul li {
+    border-bottom: 1px solid #ddd;
+    display: block
+}
+#setting-container ul li:last-child {
+    border: none
+}
+#setting-container ul li label {
+    display: block;
+    font-size: 0.88em;
+    padding: .8em;
+    position: relative;
+    transition: background .2s ease-in-out
+}
+#setting-container ul li label:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff
+}
+#setting-container ul li label:hover input ~ span {
+    color: #fff
+}
+#setting-container ul li label input {
+    visibility: hidden
+}
+#setting-container ul li label input[type='checkbox'] ~ span,
+#setting-container ul li label input[type='radio'] ~ span {
+    color: #fff
+}
+#setting-container ul li label input[type='checkbox']:checked ~ span,
+#setting-container ul li label input[type='radio']:checked ~ span {
+    color: #000
+}
+#setting-container ul li label span {
+    position: absolute;
+    right: 1em
+}
+
+h1, h2, h3, h4, p {
+    margin: 0
+}
+
+/*removing this .l-box css will put the wording to the left after all*/
+.l-box {
+    padding: 1.5em 2em
+}
+
+.card {
+    border-radius: 4px;
+    height: 100%
+}
+
+.card h1 {
+    border-top: 1px solid #000;
+    font-size: 2.1em;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-top: .3em
+}
+.card h1 #hiragana {
+    font-family: "Hiragino Kaku Gothic ProN", "Sazanami Gothic", Meiryo, "MS PGothic", sans-serif;
+    font-size: 1.1em;
+    font-weight: 200;
+    letter-spacing: -1.5px;
+    margin-right: 4px;
+    position: relative;
+    top: 4px
+}
+.card h1 #meaning {
+    font-size: .5em;
+    text-transform: uppercase;
+    font-weight: 200;
+    left: -6px;
+    position: relative;
+    top: 5px
+}
+.card p {
+    font-size: 1.5em
+}
+div#cardContainer {
+	max-width: 500px;
+	max-height: 500px;
+}

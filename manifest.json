@@ -1,0 +1,33 @@
+{
+  "name": "La Palabra",
+  "description": "Random Image Generator",
+  "version": "2.0",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "<all_urls>"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "newpage.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery.min.js", "main.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "See a new word!"
+  },
+  "web_accessible_resources": [
+    "images/*.jpg",
+    "images/*.png"
+  ],
+  "manifest_version": 2
+}
