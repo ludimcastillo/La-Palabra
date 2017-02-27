@@ -9,16 +9,15 @@ function getContent() {
     	seed = Math.floor(Math.random() * contentsSize);
     var pronunciation = contents[seed].mex.py.replace(/-/g, '\u2022'); // g is for global (all hyphens); \u2022 is for bullet point
     template = '<section class="card content" id="' + 
-    			contents[seed].img + '"><span class="' + 
-    			contents[seed].tag + 
-    			'"></span><div class="img-wrapper"><div class="' + 
+    			contents[seed].img + '"><div class="img-wrapper"><div class="' + 
     			contents[seed].img + 
-    			'-img"></div></div><div class=l-box><h1><span id=hiragana>' + 
-    			contents[seed].mex.wd + "</span> | <span id=meaning>" + 
-    			contents[seed].mean + 
-    			"</span></h1><p id=romaji class=show>" + 
-    			pronunciation + 
-    			"</p><p class=kanji></p></section>";
+    			'-img"></div></div>';
+                 //<div class=l-box><h1><span id=hiragana>' + 
+    			// contents[seed].mex.wd + "</span> | <span id=meaning>" + 
+    			// contents[seed].mean + 
+    			// "</span></h1><p id=romaji class=show>" + 
+    			// pronunciation + 
+    			// "</p><p class=kanji></p></div></section>";
 	$(document).ready(function(){
 		addImageCSS(seed);
 	});
@@ -29,16 +28,20 @@ function addImageCSS(seed) {
 	let imageName = contents[seed].img;
 	let imageClassName = contents[seed].img + "-img";
 	let imageNameURL = "../images/" + imageName + ".jpeg";
-	$("." + imageClassName).css({"background": "url("+imageNameURL+") no-repeat center center",
-						"-webkit-background-size": "contain",
-					    "-moz-background-size": "contain",
-					    "background-size": "contain",
+	$("." + imageClassName).css({"background": "url("+imageNameURL+") no-repeat center center fixed",
+					    "-webkit-background-size": "cover",
+                        "-moz-background-size": "cover",
+                        "-o-background-size": "cover",
+                        "background-size": "100% 100%",
+                        "background-color": "transparent",
 					    "display": "block",
-					    "height": "510px", // replace these with the height and margin below and the image will fit to the most it can and move left aligned
-					    "width": "450px",
-					    // "height": "350px",
-					    // "margin": "2em",
-					    "position": "relative"
+                        "top": "0",
+                        "left": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "margin": "0",
+                        "padding": "0",
+					    "position": "absolute"
 					});
 
 }

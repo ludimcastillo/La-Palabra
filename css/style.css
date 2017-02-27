@@ -50,37 +50,16 @@
   content: "\ea11";
 }
 
-*:focus {
+/**:focus {
     outline: none
-}
+}*/
 
 body {
     background: #222;
     color: #777a7d;
+    min-height: 100%;
     font-family: Cantarell, Arial, "Hiragino Kaku Gothic ProN", "Sazanami Gothic", Meiryo, "MS PGothic", sans-serif;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: box;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: middle;
-    box-align: center
+    overflow: hidden;
 }
 
 #container {
@@ -88,40 +67,17 @@ body {
     height: 100%;
     margin: 0 auto;
     width: 100%;
-    z-index: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: box;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: middle;
-    box-align: center
+    
 }
 
-#cardContainer {
+/*#cardContainer {
     height: 580px;
     width: 450px
-}
+}*/
 
-#cardContainer section {
+/*#cardContainer section {
     position: relative
-}
+}*/
 
 #website {
     bottom: 0;
@@ -146,13 +102,13 @@ body {
     bottom: 1em;
     cursor: pointer;
     display: block;
-    font-size: 1.2em;
+    font-size: 1.6em;
     position: absolute;
     text-shadow: 0 1px 0 rgba(225, 255, 255, 0.1);
 }
 #setting span,
 #info span {
-    color: #777;
+    color: #999;
     transition: color .2s ease-in-out;
 }
 #setting span:hover,
@@ -255,9 +211,13 @@ h1, h2, h3, h4, p {
     padding: 1.5em 2em
 }
 
-.card {
+/*.card {
     border-radius: 4px;
     height: 100%
+}
+*/
+.card {
+    -webkit-animation: fadein .5s ease 0s forwards;
 }
 
 .card h1 {
@@ -287,7 +247,7 @@ h1, h2, h3, h4, p {
 .card p {
     font-size: 1.5em
 }
-div#cardContainer {
+/*div#cardContainer {
 	max-width: 500px;
 	max-height: 500px;
-}
+}*/
